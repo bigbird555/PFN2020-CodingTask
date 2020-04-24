@@ -8,6 +8,11 @@ def det3(a) -> int:
 
 def solve(x: int, y: int, d:int) -> int:
     res = 0
+    if x == y:
+        if d == 0:
+            return 1
+        else:
+            return 0
     for k in range(1<<9):
         a = [[-1 for _ in range(3)] for _ in range(3)]
         for i in range(3):
